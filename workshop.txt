@@ -1,0 +1,30 @@
+version=1
+id=2854335350
+title=Panty Sniffer
+description=It's the apocalypse and there are few sources of pleasure anymore and even less judgmental people that you may as well embrace your own degeneracy and start sniffing panties.   You do you, no judgment; however there is no guarantee that the panties are fresh.
+description=
+description=Each pair is randomly assigned a clean or dirty value and the majority of the time you'll simply sniff them and move on with your life. However, about 10% of the time your character may actually find themselves enjoying the process or even disgusted by their own actions and it'll affect their happiness slightly.
+description=
+description=Very rarely (~1%) your degeneracy will reach an all time high and you'll shout out in absolute pleasure or agony.
+description=
+description=[h1]But Why?[/h1]
+description=Mostly because it makes me laugh.
+description=
+description=On August 25th I was watching [url=https://www.twitch.tv/royalewithcheesetv]RoyaleWithCheeseTV[/url] and he was complaining about not being able to sniff panties on Klean's server. Apparently he had already approached Klean about having the functionality built into another mod but the idea was shot down. I found the whole thing absurd but I realized I had all the pieces in place to make this happen quickly in another mod. So over lunch on the 26th and knocked it out for a laugh and here we are.
+description=
+description=If you don't like it, don't use it. Simple as that.  It works for all clothing items that can be worn as underwear body location. No judgement.
+description=
+description=Enjoy the apocalypse. Enjoy your panties. Simply, Enjoy.
+description=
+description=[quote]
+description=Panty Sniffer is Open-Source and published on [url=https://github.com/Orcicorn-ProjectZomboid/PantySniffer]Github[/url].
+description=Repackage, redistribute, recode, whatever, I don't care, do as you please.
+description=Credit would be appreciated. Not affiliated with RoyaleWithCheeseTV in anyway
+description=
+description=[img]https://raw.githubusercontent.com/Orcicorn-ProjectZomboid/.github/master/images/like_favorite.gif[/img] [url=https://ko-fi.com/orcicorn][img]https://raw.githubusercontent.com/Orcicorn-ProjectZomboid/.github/master/images/kofi.png[/img][/url]
+description=[/quote]
+description=
+Workshop ID: 2854335350
+Mod ID: PantySniffer
+tags=Build 41;Clothing/Armor;Multiplayer;Silly/Fun
+visibility=friendsOnly

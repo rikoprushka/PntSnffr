@@ -1,0 +1,34 @@
+UI_EN = {
+    UI_SNIFF = "Sniff",
+    UI_SNIFF_ERROR = "You've recently sniffed these. Try again later you degenerate",
+
+    UI_SNIFF_CRIT_GOOD1 = "OH HELL YEAH BABY!",
+    UI_SNIFF_CRIT_GOOD2 = "THAT'S THE STUFF",
+    UI_SNIFF_CRIT_GOOD3 = "OH YEAAAAAAAAHHHH",
+    UI_SNIFF_CRIT_GOOD4 = "YASSSSSSSSS",
+    UI_SNIFF_CRIT_GOOD5 = "OH BEHAAAAAVE",
+
+    UI_SNIFF_CRIT_BAD1 = "HOLY FUCK THATS RANK",
+    UI_SNIFF_CRIT_BAD2 = "OH GOD I'M GONNA PUKE",
+    UI_SNIFF_CRIT_BAD3 = "SWEET BABY JESUS",
+    UI_SNIFF_CRIT_BAD4 = "OMG THAT'S ROTTEN",
+    UI_SNIFF_CRIT_BAD5 = "HOLY SHIT ROTTEN RACCOON",
+
+    UI_SNIFF_REACT_GOOD1 = "MmMmmMmMmMMm",
+    UI_SNIFF_REACT_GOOD2 = "Oh god yes... mmm",
+    UI_SNIFF_REACT_GOOD3 = "Oh yeah, that's the stuff",
+    UI_SNIFF_REACT_GOOD4 = "Holy hell that smells good",
+    UI_SNIFF_REACT_GOOD5 = "Yeah bay-beeeeeee",
+
+    UI_SNIFF_REACT_BAD1 = "*gags*",
+    UI_SNIFF_REACT_BAD2 = "*eyes watering*",
+    UI_SNIFF_REACT_BAD3 = "That was a bad idea",
+    UI_SNIFF_REACT_BAD4 = "Welp... that happened",
+    UI_SNIFF_REACT_BAD5 = "What's wrong with me?'",
+
+    UI_SNIFF_NEUTRAL1 = "*sniff*",
+    UI_SNIFF_NEUTRAL2 = "*deep breath*",
+    UI_SNIFF_NEUTRAL3 = "*inhales*",
+    UI_SNIFF_NEUTRAL4 = "*quiet moan*",
+    UI_SNIFF_NEUTRAL5 = "*inhales deeply*",
+}
