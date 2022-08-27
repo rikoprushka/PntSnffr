@@ -10,11 +10,24 @@ description=
 description=[h1]But Why?[/h1]
 description=Mostly because it makes me laugh.
 description=
-description=On August 25th I was watching [url=https://www.twitch.tv/royalewithcheesetv]RoyaleWithCheeseTV[/url] and he was complaining about not being able to sniff panties on Klean's server. Apparently he had already approached Klean about having the functionality built into another mod but the idea was shot down. I found the whole thing absurd but I realized I had all the pieces in place to make this happen quickly in another mod. So over lunch on the 26th and knocked it out for a laugh and here we are.
+description=On August 25th I was watching [url=https://www.twitch.tv/royalewithcheesetv]RoyaleWithCheeseTV[/url] and he was complaining about not being able to sniff panties on Klean's server. Apparently he had already approached Klean about having the functionality built into another mod but the idea was shot down. I found the whole thing absurd but realized I had all the pieces in place to make this happen quickly in another mod. So over lunch on the 26th I knocked it out for a laugh and here we are. It can't be undone. We all need to learn to live with its existence.
 description=
-description=If you don't like it, don't use it. Simple as that.  It works for all clothing items that can be worn as underwear body location. No judgement.
+description=If you don't like it, don't use it. Simple as that. It works for all clothing items that can be worn as underwear.  Even modded items as long as they are properly programmed to use the "UnderwearBottom" body location.
 description=
-description=Enjoy the apocalypse. Enjoy your panties. Simply, Enjoy.
+description=No judgment. Enjoy the apocalypse. Enjoy your panties. Simply, Enjoy.
+description=
+description=[h1]Usage Breakdown[/h1]
+description=[list]
+description=  [*] Any Clothing Item that attaches to the Body Location "[i]UnderwearBottom[/i]" should work
+description=  [*] Every item in-game has an ID assigned when it is spawned. If the garment has an even IDs the mod considers it to be good/fresh, and if it is an odd ID, we consider it to be rotten/bad. Completely arbitrary.
+description=  [*] 90% of the time, fresh/rotten doesn't matter. No bonuses are applied and just a random text is placed above your head to denote you have sniffed the garments.
+description=  [*] 9% of the time your character will really get into it and your happiness is slightly increased or decreased (between 1 and 5 units) depending on freshness.  The "REACT" lines are used with up/down arrows above your head to denote happiness changes
+description=  [*] 1% of the time your character will strongly react to the process and SHOUT out loud and either get a little tipsy or a little queasy depending on the garmet's freshness. The "CRIT" lines are used with up/down arrows.
+description=  [*] Each garment can only be sniffed once an hour to avoid spam sniffing for happiness farming. This is accomplished by logging a mod data datestamp to the undergarments when they are sniffed.
+description=  [*] The [url=https://github.com/Orcicorn-ProjectZomboid/PantySniffer/blob/main/Contents/mods/PantySniffer/media/lua/shared/Translate/EN/UI_EN.txt]UI Translations[/url] contain 5 lines for each Neutral, Good Reaction, Bad Reaction, Good Crit and Bad Crit
+description=  [*] Works in both Single and Multiplayer though the MP testing was very basic at best. May be some issues where you can't sniff garments someone else has already sniffed within the last hour.
+description=  [*] Safe to add mid-game or remove at any time.
+description=[/list]
 description=
 description=[quote]
 description=Panty Sniffer is Open-Source and published on [url=https://github.com/Orcicorn-ProjectZomboid/PantySniffer]Github[/url].
@@ -24,7 +37,5 @@ description=
 description=[img]https://raw.githubusercontent.com/Orcicorn-ProjectZomboid/.github/master/images/like_favorite.gif[/img] [url=https://ko-fi.com/orcicorn][img]https://raw.githubusercontent.com/Orcicorn-ProjectZomboid/.github/master/images/kofi.png[/img][/url]
 description=[/quote]
 description=
-Workshop ID: 2854335350
-Mod ID: PantySniffer
 tags=Build 41;Clothing/Armor;Multiplayer;Silly/Fun
 visibility=friendsOnly
