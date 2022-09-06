@@ -9,9 +9,12 @@ function RoyaleDegeneratePantySnifferLogic(item)
         return;
     end
 
-    -- Determine the reaction chance and the type
-    -- 1-100 random chance.  Good/Bad determined by ItemID (Even Good, Odd Bad)
-    local reactChance = ZombRand(100);
+    -- Determine the player's reaction to Sniffing the panties
+    -- The Chance is the last 2 digits of the ID converted to an integer (00-99)
+    -- If the ID is even, good reaction, if it's odd, bad reaction
+    -- We do it off of the ID instead of Random so that a good pair is always a good pair
+    -- and a disgusting pair is always disgusting. Lil exploitive but whatever. 1% chance you find a pair
+    local reactChance = tonumber(string.sub(item:getID(), -2))
     local reactGood = (item:getID() % 2 == 0);
 
     -- Prepare some variables
@@ -31,7 +34,8 @@ function RoyaleDegeneratePantySnifferLogic(item)
 
     -- 90% chance it's just a regular sniff and no benefits
     -- Run the halo text and call it a day
-    if reactChance > 9 and reactChance ~= 69 then
+    if reactChance > 10 and reactChance ~= 68 and reactChance ~= 69 then
+        player:playEmote("thankyou");
         emoteMessage = getText("UI_SNIFF_NEUTRAL" .. ZombRand(1, countNeutral));
         HaloTextHelper.addText(player, emoteMessage, HaloTextHelper.getColorWhite());
         HaloTextHelper.update();
@@ -55,7 +59,7 @@ function RoyaleDegeneratePantySnifferLogic(item)
     end
 
     -- 10% Chance you react [Positive|Negative]ly to the sniffing
-    if reactChance <= 9 then
+    if reactChance <= 10 then
         player:playEmote(emoteAction);
         local unHappy = playerDamage:getUnhappynessLevel()
         if reactGood then
@@ -72,7 +76,7 @@ function RoyaleDegeneratePantySnifferLogic(item)
     end
 
     -- 1% chance you just Crit on the item and are going to puke or get a little intoxicated
-    if reactChance == 69 then
+    if reactChance == 68 or reactChance == 69 then
         player:playEmote(emoteAction);
         if reactGood then
             -- Really loving this, get a little tipsy for a moment
@@ -101,23 +105,26 @@ end
     
 
 -- Handle the right-click inventory menu items.  if it's clothing and it's underwear
--- then setup the "Sniff" action ability.  Then disable it if you've already sniffed
+-- and that underwear is in our inventory then then setup the "Sniff" action ability.
+-- Then disable it if you've already sniffed
 -- these recently (Using the ActionID Function)
 function RoyaleDegeneratePantySnifferMenu(player, context, items)
     local items = ISInventoryPane.getActualItems(items)
     local actionID = RoyaleDegeneratePantySnifferGenerateActionID()
     for _, item in ipairs(items) do
-        if item:getCategory() == "Clothing" then
-            if item:getBodyLocation() == "UnderwearBottom" then
-                local option = context:addOption(getText("UI_SNIFF"), item, RoyaleDegeneratePantySnifferLogic);
-                if item:getModData().PantySniffer == actionID then
-                    local toolTip = ISWorldObjectContextMenu.addToolTip();
-                    option.toolTip = toolTip;
-                    toolTip.description = getText("UI_SNIFF_ERROR");
-                    option.notAvailable = true;
+        if item:isInPlayerInventory() then
+            if item:getCategory() == "Clothing" then
+                if item:getBodyLocation() == "UnderwearBottom" then
+                    local option = context:addOption(getText("UI_SNIFF"), item, RoyaleDegeneratePantySnifferLogic);
+                    if item:getModData().PantySniffer == actionID then
+                        local toolTip = ISWorldObjectContextMenu.addToolTip();
+                        option.toolTip = toolTip;
+                        toolTip.description = getText("UI_SNIFF_ERROR");
+                        option.notAvailable = true;
+                    end
+                    -- Only show one sniff menu option
+                    return;
                 end
-                -- Only show one sniff menu option
-                return;
             end
         end
     end
