@@ -36,6 +36,5 @@ description=Credit would be appreciated. Not affiliated with RoyaleWithCheeseTV 
 description=
 description=[img]https://raw.githubusercontent.com/Orcicorn-ProjectZomboid/.github/master/images/like_favorite.gif[/img] [url=https://ko-fi.com/orcicorn][img]https://raw.githubusercontent.com/Orcicorn-ProjectZomboid/.github/master/images/kofi.png[/img][/url]
 description=[/quote]
-description=
 tags=Build 41;Clothing/Armor;Multiplayer;Silly/Fun
-visibility=friendsOnly
+visibility=public
