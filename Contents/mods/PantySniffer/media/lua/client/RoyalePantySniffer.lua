@@ -85,8 +85,9 @@ function RoyaleDegeneratePantySnifferLogic(item)
             end
         else
             -- Absolutely disgusting, get quesy you degenerate bastard
-            if playerDamage:getFakeInfectionLevel() < 26 then
-                playerDamage:setFakeInfectionLevel(26);
+            -- Switched from FakeInfection to FoodSickness so you can recover
+            if playerDamage:getFoodSicknessLevel() < 26 then
+                playerDamage:setFoodSicknessLevel(26);
             end
         end
         player:SayShout(getText("UI_SNIFF_CRIT_" .. emoteType .. ZombRand(1, countCrit)));
