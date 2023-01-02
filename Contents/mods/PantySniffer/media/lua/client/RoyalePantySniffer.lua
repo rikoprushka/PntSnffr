@@ -9,6 +9,11 @@ function RoyaleDegeneratePantySnifferLogic(item)
         return;
     end
 
+    -- Transfer to inventory if needed
+    if item:isInPlayerInventory() == false then
+        ISInventoryPaneContextMenu.transferIfNeeded(player, item)
+    end
+
     -- Determine the player's reaction to Sniffing the panties
     -- The Chance is the last 2 digits of the ID converted to an integer (00-99)
     -- If the ID is even, good reaction, if it's odd, bad reaction
@@ -107,25 +112,26 @@ end
 
 -- Handle the right-click inventory menu items.  if it's clothing and it's underwear
 -- and that underwear is in our inventory then then setup the "Sniff" action ability.
--- Then disable it if you've already sniffed
+-- Then disable it if you've already sniffed (Underwear, UnderwearBottom, UnderwearTop)
 -- these recently (Using the ActionID Function)
 function RoyaleDegeneratePantySnifferMenu(player, context, items)
     local items = ISInventoryPane.getActualItems(items)
     local actionID = RoyaleDegeneratePantySnifferGenerateActionID()
     for _, item in ipairs(items) do
-        if item:isInPlayerInventory() then
-            if item:getCategory() == "Clothing" then
-                if item:getBodyLocation() == "UnderwearBottom" then
-                    local option = context:addOption(getText("UI_SNIFF"), item, RoyaleDegeneratePantySnifferLogic);
-                    if item:getModData().PantySniffer == actionID then
-                        local toolTip = ISWorldObjectContextMenu.addToolTip();
-                        option.toolTip = toolTip;
-                        toolTip.description = getText("UI_SNIFF_ERROR");
-                        option.notAvailable = true;
-                    end
-                    -- Only show one sniff menu option
-                    return;
+        if item:getCategory() == "Clothing" then 
+            local location = string.lower(item:getBodyLocation())
+            if location == "underwear" or location == "underwearbottom" then
+                -- Add tooltip for Sniffing
+                local option = context:addOption(getText("UI_SNIFF"), item, RoyaleDegeneratePantySnifferLogic);
+                -- Disable if this pair's been recently sniffed
+                if item:getModData().PantySniffer == actionID then
+                    local toolTip = ISWorldObjectContextMenu.addToolTip();
+                    option.toolTip = toolTip;
+                    toolTip.description = getText("UI_SNIFF_ERROR");
+                    option.notAvailable = true;
                 end
+                -- Only show one sniff menu option
+                return;
             end
         end
     end
