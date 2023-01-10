@@ -1,0 +1,34 @@
+UI_TH = {
+    UI_SNIFF = "ดม",
+    UI_SNIFF_ERROR = "คุณดมไปแล้วเมื่อไม่นานมานี้ ลองใหม่ภายหลังนะไอ้หื่น",
+
+    UI_SNIFF_CRIT_GOOD1 = "ถูกใจใช่เลย!",
+    UI_SNIFF_CRIT_GOOD2 = "หอมชื่นใจ",
+    UI_SNIFF_CRIT_GOOD3 = "อาาา สุดยอด",
+    UI_SNIFF_CRIT_GOOD4 = "ซี๊ดดดดดด",
+    UI_SNIFF_CRIT_GOOD5 = "ฟินสุด ๆ ไปเลยจ้า",
+
+    UI_SNIFF_CRIT_BAD1 = "เหี้ยไรวะเนี่ย",
+    UI_SNIFF_CRIT_BAD2 = "ฉิบหาย... แทบอ้วก",
+    UI_SNIFF_CRIT_BAD3 = "กลิ่นปลาเค็มชัด ๆ",
+    UI_SNIFF_CRIT_BAD4 = "กลิ่นอย่างกับปลาร้าค้างคืน",
+    UI_SNIFF_CRIT_BAD5 = "เน่าหมดแล้วมั้งเนี่ย",
+
+    UI_SNIFF_REACT_GOOD1 = "อื้มมมมมมม",
+    UI_SNIFF_REACT_GOOD2 = "แบบนี้สิ... อื้มมมม",
+    UI_SNIFF_REACT_GOOD3 = "โอย สุดยอดดดด",
+    UI_SNIFF_REACT_GOOD4 = "หอมถูกใจใช่เลย",
+    UI_SNIFF_REACT_GOOD5 = "สุดเหวี่ยงไปเลยเว้ยเฮ้ย",
+
+    UI_SNIFF_REACT_BAD1 = "*แค่ก*",
+    UI_SNIFF_REACT_BAD2 = "*น้ำตาไหล*",
+    UI_SNIFF_REACT_BAD3 = "ไม่น่าเลย",
+    UI_SNIFF_REACT_BAD4 = "กลิ่น... ไม่ไหวเลย",
+    UI_SNIFF_REACT_BAD5 = "ทำไปทำไมวะเนี่ย?'",
+
+    UI_SNIFF_NEUTRAL1 = "*สูดดดด*",
+    UI_SNIFF_NEUTRAL2 = "*สุดปอดเลย*",
+    UI_SNIFF_NEUTRAL3 = "*สูดเข้า*",
+    UI_SNIFF_NEUTRAL4 = "*อ้าาาา*",
+    UI_SNIFF_NEUTRAL5 = "*ฟืดดดด*",
+}
